@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('금호동3가', style: TextStyle(fontWeight: FontWeight.bold),),
+          title: Text('용산 대통령실', style: TextStyle(fontWeight: FontWeight.bold),),
           actions: [Icon(Icons.search), Icon(Icons.menu), Icon(Icons.doorbell)],
 
           backgroundColor: Colors.white,
@@ -24,9 +24,9 @@ class MyApp extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
 
             children: [
-              Image.asset('assets/welding.png',
-                width: 150,
-                height: 150,
+              Image.asset('assets/uppercut.gif',
+                width: 300,
+                height: 240,
                 fit: BoxFit.cover,
               ),
               SizedBox(width: 12,),
@@ -35,13 +35,14 @@ class MyApp extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        '캐논 DSLR100D',
+                        '주먹왕 윤프',
                         style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+
                       ),
                       SizedBox(height: 4,),
                       Row(
                         children: [
-                          Icon(Icons.favorite)
+                          //Icon(Icons.favorite)
                         ],
                       )
                     ],
