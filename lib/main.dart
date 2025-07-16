@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         bottomNavigationBar: BottomAppBar(
+
           child: Container(
             color: Colors.white,
             height: 70,
