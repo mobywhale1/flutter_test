@@ -13,38 +13,50 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(
-          title: Text('hello'),
-          backgroundColor: Colors.blue,
-        ),
-        body: Align(
-          alignment: Alignment.bottomCenter,
-          child: Container(
-            width: double.infinity, height: 150,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black),
-              color: Colors.blue
-            ),
-            //margin: EdgeInsets.fromLTRB(20, 0, 0, 0),
-            child: Text('ddddd'),
-          ),
-        ),
-        bottomNavigationBar: BottomAppBar(
+          title: Text('금호동3가', style: TextStyle(fontWeight: FontWeight.bold),),
+          actions: [Icon(Icons.search), Icon(Icons.menu), Icon(Icons.doorbell)],
 
-          child: Container(
-            color: Colors.white,
-            height: 70,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(Icons.phone),
-                Icon(Icons.message),
-                Icon(Icons.contact_page),
-              ],
-            ),
-          ),
-      )
-      )
-    );
+          backgroundColor: Colors.white,
+        ),
 
+        body: Container(
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+
+            children: [
+              Image.asset('assets/welding.png',
+                width: 150,
+                height: 150,
+                fit: BoxFit.cover,
+              ),
+              SizedBox(width: 12,),
+              Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        '캐논 DSLR100D',
+                        style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 4,),
+                      Row(
+                        children: [
+                          Icon(Icons.favorite)
+                        ],
+                      )
+                    ],
+
+                  )
+              ),
+            ],
+
+
+              )
+
+          ),
+          bottomNavigationBar: BottomAppBar()
+        ),
+
+      );
   }
 }
